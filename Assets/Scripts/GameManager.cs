@@ -24,21 +24,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void ClearTouchInstantiatedObjects()
-    {
-        var allGameObjects = FindObjectsOfType<GameObject>();
-
-        for (int i = 0; i < allGameObjects.Length; i++)
-        {
-            if (debugComponent)
-                Debug.Log("allGameObjects[i]: " + allGameObjects[i].name);
-
-            if (allGameObjects[i].name.Contains("Clone"))
-                Destroy(allGameObjects[i]);
-            
-        }
-    }
-
     public void QuitApplication()
     {
         Application.Quit();
